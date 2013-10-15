@@ -1,0 +1,7 @@
+This is an automated message from Your_Application.
+
+Our records show that your password has not been updated in the last 90 days.
+
+Please find the time to log in to your account and update it.
+
+Thank you.
