@@ -5,10 +5,14 @@ from collections import OrderedDict
 
 print "Open and read an external file:"
 f = open('external_file', 'r')
+#print "There %s lines in %s" % (counter,f) 
 for line in f:
-  print line,
+  print "%s" % line
 
-##f.close()
+print "\nFile line counts:\n"
+with open("external_file") as f:
+  lines = sum(1 for line in f)
+  print "There are %s lines\n" % lines
 
 print "\nFile to Dictionary:\n"
 with open("external_file") as f:
@@ -33,3 +37,4 @@ print OrderedDict(sorted(d.items(), key=lambda t: len(t[0])))
 print "\nSorted dictionary by value length:\n"
 print OrderedDict(sorted(d.items(), key=lambda t: len(t[1])))
 
+f.close()
